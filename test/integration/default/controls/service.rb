@@ -2,7 +2,7 @@
 
 service_name =
   case system.platform[:finger]
-  when 'ubuntu-22.04', 'ubuntu-20.04', 'debian-11'
+  when /^(ubuntu|debian)/
     'strongswan-starter'
   else
     'strongswan'
