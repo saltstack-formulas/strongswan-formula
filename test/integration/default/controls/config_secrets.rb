@@ -42,4 +42,8 @@ control 'Strongswan secrets configuration' do
       should include '10.10.1.1 : PSK "v+NkxY9LLZvwj4qCC2o/gGrWDF2d21jL"'
     end
   end
+
+  describe file("#{prefix}/etc/ipsec.secrets.d/deleteme-unmanaged.secret") do
+    it { should_not exist }
+  end
 end

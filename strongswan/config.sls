@@ -72,11 +72,14 @@ strongswan-config-file-ipsec-conn-{{ connection }}:
     - user: root
     - group: {{ strongswan.group }}
     - mode: '0644'
+    - makedirs: True
     - context:
         connection: {{ connection }}
         data: {{ data|json }}
     - watch_in:
       - service: strongswan-service
+    - require_in:
+      - file: strongswan-config-directory-ipsec-dropin-connections
 {% endfor %}
 
 # Global secrets
@@ -119,10 +122,13 @@ strongswan-config-file-ipsec-secret-{{ secret }}:
     - user: root
     - group: {{ strongswan.group }}
     - mode: '0600'
+    - makedirs: True
     - context:
         secret: {{ secret }}
         data: {{ data|json }}
     - watch_in:
       - service: strongswan-service
+    - require_in:
+      - file: {{ strongswan.config.dropin_secrets }}
 {% endfor %}
 
