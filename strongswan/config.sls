@@ -21,9 +21,9 @@
 {%- endfor %}
 
 {% if connections %}
-  {% set conn_dropin = True %}
+  {% set conn_dropin = true %}
 {% else %}
-  {% set conn_dropin = False %}
+  {% set conn_dropin = false %}
 {% endif %}
 
 {%- set secrets = salt['pillar.get']('strongswan:secrets', {}) %}
@@ -56,7 +56,7 @@ strongswan-config-directory-ipsec-dropin-connections:
     - name: {{ strongswan.config.dropin_options }}
     - user: root
     - group: {{ strongswan.group }}
-    - clean: True
+    - clean: true
 {% endif %}
 
 {% for connection, data in connections.items() %}
@@ -72,7 +72,7 @@ strongswan-config-file-ipsec-conn-{{ connection }}:
     - user: root
     - group: {{ strongswan.group }}
     - mode: '0644'
-    - makedirs: True
+    - makedirs: true
     - context:
         connection: {{ connection }}
         data: {{ data|json }}
@@ -106,7 +106,7 @@ strongswan-config-directory-ipsec-dropin-secrets:
     - user: root
     - group: {{ strongswan.group }}
     - mode: '0600'
-    - clean: True
+    - clean: true
 {% endif %}
 
 {% for secret, data in secrets.items() %}
@@ -122,7 +122,7 @@ strongswan-config-file-ipsec-secret-{{ secret }}:
     - user: root
     - group: {{ strongswan.group }}
     - mode: '0600'
-    - makedirs: True
+    - makedirs: true
     - context:
         secret: {{ secret }}
         data: {{ data|json }}

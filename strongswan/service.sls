@@ -9,9 +9,8 @@ include:
 strongswan-service:
   service.running:
     - name: {{ strongswan.service.name }}
-    - enable: True
+    - enable: true
     - reload: {{ strongswan.service.reload }}
     - watch:
       - file: {{ strongswan.config.global_options }}
       - file: {{ strongswan.config.global_secrets }}
-
