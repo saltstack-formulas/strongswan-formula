@@ -7,7 +7,8 @@
 # (empty `os`es do not need to be listed, just added here as an example).
 # os_family: Debian
 ---
-Ubuntu: {}
+Ubuntu:
+  pkg: strongswan-starter
 
 Raspbian: {}
 
