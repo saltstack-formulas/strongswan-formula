@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.5.2](https://github.com/saltstack-formulas/strongswan-formula/compare/v0.5.1...v0.5.2) (2026-09-10)
+
+### Bug Fixes
+
+* improve Debian/Ubuntu compatibility ([192dd08](https://github.com/saltstack-formulas/strongswan-formula/commit/192dd081a6aa1d21a9a73a3ea0719d687e0faed3))
+
+### Maintenance
+
+* **copier:** update template https://github.com/dafyddj/copier-ssf-ci to v2.11.11 ([43fc000](https://github.com/saltstack-formulas/strongswan-formula/commit/43fc0002fa11594ddd4979f1ee0a850fe3d24aeb))
+
 ## [0.5.1](https://github.com/saltstack-formulas/strongswan-formula/compare/v0.5.0...v0.5.1) (2026-08-11)
 
 ### Bug Fixes
