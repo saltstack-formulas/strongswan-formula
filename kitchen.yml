@@ -245,6 +245,11 @@ verifier:
 suites:
   - name: default
     provisioner:
+      init_environment: |
+        sudo mkdir -p /etc/ipsec.conf.d/
+        sudo mkdir -p /etc/ipsec.secrets.d/
+        sudo touch /etc/ipsec.conf.d/deleteme-unmanaged.conf
+        sudo touch /etc/ipsec.secrets.d/deleteme-unmanaged.secret
       state_top:
         base:
           '*':
