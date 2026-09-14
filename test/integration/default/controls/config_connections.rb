@@ -39,4 +39,8 @@ control 'Strongswan connections configuration' do
     its('content') { should include '    right=10.20.1.1' }
     its('content') { should include '    rightsubnet=10.20.1.0/32' }
   end
+
+  describe file("#{prefix}/etc/ipsec.conf.d/deleteme-unmanaged.conf") do
+    it { should_not exist }
+  end
 end
