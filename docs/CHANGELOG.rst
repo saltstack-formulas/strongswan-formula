@@ -2,6 +2,21 @@
 Changelog
 =========
 
+`0.5.3 <https://github.com/saltstack-formulas/strongswan-formula/compare/v0.5.2...v0.5.3>`_ (2026-09-14)
+------------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **config:** do not remove managed config files (\ `ca54e60 <https://github.com/saltstack-formulas/strongswan-formula/commit/ca54e6094ac3ee16d85f1c5612677c53be36a19e>`_\ )
+
+Code Refactoring
+^^^^^^^^^^^^^^^^
+
+
+* make booleans in yaml lowercase (\ `694feec <https://github.com/saltstack-formulas/strongswan-formula/commit/694feec5adf58d77fbd5dbf55edca9aa5270caf6>`_\ )
+
 `0.5.2 <https://github.com/saltstack-formulas/strongswan-formula/compare/v0.5.1...v0.5.2>`_ (2026-09-10)
 ------------------------------------------------------------------------------------------------------------
 
